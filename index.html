@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVault - Premium Learning Resources</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <header class="header glass">
+        <div class="container header-content">
+            <h1 class="logo">Edu<span class="highlight">Vault</span></h1>
+            <nav class="nav">
+                <a href="#materials" class="nav-link">Materials</a>
+                <a href="#upload" class="nav-link btn-primary">Upload File</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero glass fade-in">
+            <div class="hero-text">
+                <h2>Elevate Your <br><span class="gradient-text">Learning Experience</span></h2>
+                <p>Upload, share, and discover premium educational materials. A centralized hub for all your academic resources.</p>
+                <a href="#upload" class="btn-primary hero-btn">Start Uploading</a>
+            </div>
+            <div class="hero-image">
+                <!-- A decorative element instead of an image to keep it self-contained -->
+                <div class="decorative-card float-animation">
+                    <div class="card-icon">📚</div>
+                    <h3>Study Material</h3>
+                    <p>PDF, DOCX, PPTX</p>
+                </div>
+                <div class="decorative-card float-animation delay">
+                    <div class="card-icon">🚀</div>
+                    <h3>Fast Upload</h3>
+                    <p>Instant Sharing</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="upload" class="upload-section glass slide-up">
+            <div class="section-header">
+                <h2>Upload <span class="highlight">Material</span></h2>
+                <p>Add new files to the learning repository.</p>
+            </div>
+            
+            <form id="uploadForm" class="upload-area">
+                <div class="upload-dropzone" id="dropzone">
+                    <div class="dropzone-content">
+                        <div class="upload-icon">📁</div>
+                        <h3>Drag & Drop your files here</h3>
+                        <p>or click to browse from your computer</p>
+                        <input type="file" id="fileInput" class="file-input" required>
+                        <label for="fileInput" class="btn-secondary">Browse Files</label>
+                    </div>
+                </div>
+                
+                <div class="form-group mt-2">
+                    <label for="fileTitle">Title / Description</label>
+                    <input type="text" id="fileTitle" placeholder="e.g. Chapter 4 Physics Notes" required>
+                </div>
+                
+                <button type="submit" class="btn-primary w-100" id="submitBtn">Upload to Vault</button>
+            </form>
+            <div id="uploadStatus" class="upload-status hidden">
+                <div class="spinner"></div>
+                <p>Uploading...</p>
+            </div>
+        </section>
+
+        <section id="materials" class="materials-section slide-up delay-2">
+            <div class="section-header">
+                <h2>Available <span class="highlight">Resources</span></h2>
+                <p>Download and study from the latest uploads.</p>
+            </div>
+            
+            <div class="file-grid" id="fileGrid">
+                <!-- File cards will be injected here by JavaScript -->
+                
+                <div class="file-card glass">
+                    <div class="file-icon pdf-icon">PDF</div>
+                    <div class="file-details">
+                        <h4>Advanced Calculus Chapter 1</h4>
+                        <p>Uploaded just now • 2.4 MB</p>
+                    </div>
+                    <button class="btn-download">Download</button>
+                </div>
+
+                <div class="file-card glass">
+                    <div class="file-icon doc-icon">DOC</div>
+                    <div class="file-details">
+                        <h4>World History Essay Draft</h4>
+                        <p>Uploaded 2 hours ago • 1.1 MB</p>
+                    </div>
+                    <button class="btn-download">Download</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 EduVault. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
